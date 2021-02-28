@@ -1,0 +1,11 @@
+@import "../../style/colors";
+
+.layout {
+ background-color: $tr-secondary;
+ padding: 0 50px 50px 50px;
+ 
+    &__inner {
+        width: 76vw;
+        margin: 0 auto;
+    }
+}

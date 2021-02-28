@@ -1,0 +1,27 @@
+@import "../../style/colors";
+
+.location {
+    padding: 10px;
+    background-color: $tr-light-primary;
+    line-height: 20px;
+}
+.title {
+    color:$tr-primary;
+}
+
+.gps {
+    display: flex;
+    flex-direction: row;
+
+    &__icon {
+        height: 20px;
+
+        .image {
+            height: 20px;
+        }
+    }
+    &__location {
+        margin: 0;
+        color: $tr-secondary;
+    }
+}

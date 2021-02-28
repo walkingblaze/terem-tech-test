@@ -1,0 +1,33 @@
+@import "../../style/colors";
+
+.block {
+    &-content {
+        background-color: $tr-white;
+        padding-bottom: 3rem;
+    }
+}
+
+.search {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+    &__input {
+        border-color: #acd2f0;
+        height: 25px;
+        appearance: none;
+        outline: none;
+        padding-left: 10px;
+
+        &::placeholder {
+            opacity: .7;
+        }
+    }
+}
+
+.content {
+    section {
+        padding: 1rem;
+        color: $tr-primary;
+    }
+}

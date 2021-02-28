@@ -1,0 +1,100 @@
+@import "../../style/mixins";
+@import "../../style/colors";
+
+$slide-height: 210px;
+
+.carousel {
+    $carousel: &;
+    margin: 0 auto;
+    position:relative;
+
+    &__image {
+        width: 100%;
+    }
+
+    &-next-icon {
+        @include nav-icon("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNSAzbDMuMDU3LTMgMTEuOTQzIDEyLTExLjk0MyAxMi0zLjA1Ny0zIDktOXoiLz48L3N2Zz4=")
+    }
+
+    &-back-icon {
+        @include nav-icon("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTYuNjcgMGwyLjgzIDIuODI5LTkuMzM5IDkuMTc1IDkuMzM5IDkuMTY3LTIuODMgMi44MjktMTIuMTctMTEuOTk2eiIvPjwvc3ZnPg==")
+    }
+    
+    &__back-button {
+        background: rgb(253,253,255);
+        background:linear-gradient(90deg, rgba(253, 253, 255, 0) -15%, rgba(255, 255, 255, 0.93041) 99%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 206px;
+        opacity: .6;
+        border-style: none;
+        width: 65px;
+        
+        &:active {
+            border-style: none;
+        }
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            opacity: 1;
+        }
+
+        &:disabled {
+            display: none;
+        }
+    }
+
+    &__next-button {
+        position: absolute;
+        top: 0;
+        right: 18px;
+        height: 206px;
+        background: rgb(253,253,255);
+        background:linear-gradient(90deg, rgba(253, 253, 255, 0) -15%, rgba(255, 255, 255, 0.93041) 99%);
+        width: 65px;
+        border-style: none;
+        opacity: .6;
+
+        &:active {
+            border-style: none;
+        }
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            opacity: 1;
+        }
+        &:disabled {
+            display: none;
+        }
+    }
+
+    &__slider--horizontal {
+        height: 210px;
+    }
+        
+    &__inner-slide {
+        display: flex;
+        flex-direction: column;
+        height: #{$slide-height};
+        margin-right: 20px;
+       
+        .slide {
+            &__image {
+                height: calc(#{$slide-height} - 67px);
+                border: 2px solid $tr-grey;
+            }
+
+            &__content {
+                display: flex;
+                flex-flow: column wrap;
+                background-color: $tr-light-primary;
+                border-width: 0 2px 2px;
+                border-style: solid;
+                border-color: $tr-grey;
+            }
+        }
+    }
+}
